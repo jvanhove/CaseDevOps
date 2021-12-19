@@ -1,0 +1,14 @@
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.deps.json
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.runtimeconfig.json
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\appsettings.Development.json
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\appsettings.json
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.staticwebassets.runtime.json
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.exe
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.dll
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\Dapper.Contrib.dll
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\System.Data.SqlClient.dll
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\Dapper.dll
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\bin\Debug\BlazorServerDevOps.pdb
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\ThomasMore\APP-AI-2\DevOps\BlazorServerDevOps\obj\Debug\docker-compose.dcproj.CopyComplete

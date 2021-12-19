@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "mHDbI4G102CDLYklXg/TPXvV1qClqC4oBKLzfLuFkQwEod6wNufRkmluEAP42d12nHNmvDEd5MAPDg4J8VE8rw==",
+  "success": true,
+  "projectFilePath": "C:\\ThomasMore\\APP-AI-2\\DevOps\\BlazorServerDevOps\\BlazorServerDevOps\\BlazorServerDevOps.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\janva\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\6.0.0\\microsoft.aspnetcore.authentication.negotiate.6.0.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.0\\microsoft.aspnetcore.connections.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.extensions.features\\6.0.0\\microsoft.extensions.features.6.0.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\system.directoryservices.protocols\\6.0.0\\system.directoryservices.protocols.6.0.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\system.io.pipelines\\6.0.0\\system.io.pipelines.6.0.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\janva\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

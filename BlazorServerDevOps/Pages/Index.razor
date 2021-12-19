@@ -1,0 +1,167 @@
+﻿@page "/"
+@inject DapperRepository<Customer> CustomerManager
+<h3>Clients</h3>
+@if (Customers != null)
+{
+    <select @onchange="CustomerSelected" size="10" style="width:100%;">
+        @foreach (var customer in Customers)
+        {
+            if (SelectedCustomer != null && customer.CustomerId == SelectedCustomer.CustomerId)
+            {
+                <option selected value="@customer.CustomerId">@customer.Company&nbsp;</option>
+            }
+            else
+            {
+                <option value="@customer.CustomerId">@customer.Company&nbsp;</option>
+            }
+        }
+    </select>
+    <br />
+
+
+ 
+
+
+if(SelectedCustomer!=null){
+        <div>
+            Contact Person: @SelectedCustomer.FirstName @SelectedCustomer.LastName
+        </div>
+        <table>
+            <tr>
+                <td><label>Company</label></td>
+                <td><input type="text" id="txtCompany" @bind-value="@SelectedCustomer.Company"></td>
+            </tr>
+            <tr>
+                <td><label>First name Contact person</label></td>
+                <td><input type="text" id="txtFirstname" @bind-value="@SelectedCustomer.FirstName"></td>
+            </tr>
+            <tr>
+                <td><label>Last name Contact person</label></td>
+                <td><input type="text" id="txtLastname" @bind-value="@SelectedCustomer.LastName"></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><input type="text" id="txtAddress" @bind-value="@SelectedCustomer.Address"></td>
+            </tr>
+            <tr>
+                <td><label>Phone</label></td>
+                <td><input type="text" id="txtPhone" @bind-value="@SelectedCustomer.Phone"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" id="txtEmail" @bind-value="@SelectedCustomer.Email"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button @onclick="UpdateCustomer">Update @SelectedCustomer.Company</button>
+                </td>
+                <td>
+                    <button @onclick="DeleteCustomer">Delete @SelectedCustomer.Company</button>
+                </td>
+                <td>
+                    <button @onclick="AddCustomer">Add Client</button>
+                </td>
+            </tr>
+        </table>
+        
+        <br />
+        <br />
+        }
+    <span style="color:red;">@ErrorMessage</span>
+}
+else
+{
+    <span>Loading...</span>
+}
+
+@code
+{
+    List<Customer> Customers { get; set; }
+    
+    //Customer SelectedCustomer;
+    Customer SelectedCustomer = new Customer()
+        {
+            Address = "",
+            City = "",
+            Company = "",
+            Country = "",
+            Email = "",
+            Fax = "",
+            FirstName = "",
+            LastName = "",
+            Phone = "",
+            PostalCode = "",
+            State = ""
+        };
+    string ErrorMessage = "";
+    bool CanIAddCarl
+    {
+        get
+        {
+            var carl = (from x in Customers
+                        where x.FirstName == "Carl"
+                        && x.LastName == "Franklin"
+                        select x).FirstOrDefault();
+            return (carl == null);
+        }
+    }
+
+    async Task CustomerSelected(ChangeEventArgs args)
+    {
+        var Id = Convert.ToInt32(args.Value.ToString());
+        SelectedCustomer = (from x in Customers where x.CustomerId == Id select x).FirstOrDefault();
+        var dbCust = (await CustomerManager.GetAsync($"select * from customer where customerid = {Id}")).FirstOrDefault();
+    }
+
+    async Task UpdateCustomer()
+    {
+        ErrorMessage = "";
+        var updated = await CustomerManager.UpdateAsync(SelectedCustomer);
+        if (updated == null)
+        {
+            ErrorMessage = "Could not update Customer";
+        }
+    }
+
+    async Task AddCustomer()
+    {
+        ErrorMessage = "";
+
+        var newCustomer = await CustomerManager.InsertAsync(SelectedCustomer);
+        if (newCustomer != null)
+            await LoadAllCustomers();
+        else
+            ErrorMessage = "Could not insert customer";
+    }
+
+    async Task DeleteCustomer()
+    {
+        ErrorMessage = "";
+        var success = await CustomerManager.DeleteAsync(SelectedCustomer);
+        if (success)
+        {
+            SelectedCustomer = null;
+            await LoadAllCustomers();
+        }
+        else
+        {
+            ErrorMessage = "Customer could not be deleted";
+        }
+    }
+
+    async Task LoadAllCustomers()
+    {
+        await Task.Delay(0);
+
+        var result = await CustomerManager.GetAsync("select * from customer order by Company");
+
+        Customers = result.ToList();
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAllCustomers();
+    }
+
+}

@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=123HardPassword***!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssqldata:/var/opt/mysql
+  blazorserverdevops:
+    image: ${DOCKER_REGISTRY-}blazorserverdevops
+    build:
+      context: .
+      dockerfile: BlazorServerDevOps/Dockerfile
+    ports:
+      - "8080:80" 
+    depends_on:
+      - db
+
+volumes:
+  mssqldata:

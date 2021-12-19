@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e8931a93-f30b-4772-9add-fd8ce804fa18": {
+      "ProjectGuid": "e8931a93-f30b-4772-9add-fd8ce804fa18",
+      "DisplayName": "BlazorServerDevOps",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "dbfdd518-639a-472d-9f16-2f1f82ce534a": {
+      "ProjectGuid": "dbfdd518-639a-472d-9f16-2f1f82ce534a",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 1
+    },
+    "88240712-1085-4692-96df-88d35e78c76f": {
+      "ProjectGuid": "88240712-1085-4692-96df-88d35e78c76f",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
